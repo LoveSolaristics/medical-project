@@ -26,6 +26,13 @@ def visualization():
                  c_keys.index(c) + \
                  d_keys.index(d)
 
+        if points == 0 or points > 5:
+            st.warning(f'{points} баллов')
+        elif points == 1:
+            st.warning(f'{points} балл')
+        else:
+            st.warning(f'{points} балла')
+
         if points == 0:
             st.info('Дегидратация отстутстует')
         elif points <= 4:
