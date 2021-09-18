@@ -1,6 +1,7 @@
 import streamlit as st
 import pages.page_1 as p1
 import pages.page_2 as p2
+import pages.page_3 as p3
 
 from pathlib import Path
 import base64
@@ -22,7 +23,7 @@ def visualization():
     раздел можно выбрать в боковом меню.""")
 
 
-page_names = ['Вводная страничка', 'Раздел 1', 'Раздел 2']
+page_names = ['Вводная страничка', 'Раздел 1', 'Раздел 2', 'Раздел 3']
 
 with st.sidebar:
     st.markdown('# Место для названия')
@@ -74,3 +75,6 @@ elif page == page_names[1]:
 
 elif page == page_names[2]:
     p2.visualization()
+
+elif page == page_names[3]:
+    p3.visualization()
