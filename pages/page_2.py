@@ -2,7 +2,7 @@ import streamlit as st
 
 
 def visualization():
-    st.markdown('# Раздел 2')
+    st.markdown('# Определение степени дегидратации')
     st.markdown('Шкала клинической оценки степени дегидратации.')
 
     a_keys = ['Нормальный',

@@ -28,7 +28,7 @@ def input_file():
 
 
 def visualization():
-    st.markdown('# Раздел 1')
+    st.markdown('# Кишечные инфекции (МКБ10)')
     st.markdown('Введите название инфекции, а мы выведем её код.')
 
     infections, codes = input_file()

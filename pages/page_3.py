@@ -1,7 +1,7 @@
 import streamlit as st
 
 def visualization():
-    st.markdown('# Раздел 3')
+    st.markdown('# Коррекция электролитов')
 
     elements = ['Кальций', 'Калий', 'Магний']
 
