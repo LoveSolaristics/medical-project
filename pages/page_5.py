@@ -1,4 +1,5 @@
 import streamlit as st
+from PIL import Image
 
 def visualization():
     st.markdown(f"""
@@ -35,3 +36,7 @@ def visualization():
             st.info(f'{answers_min[idx] * weight} - {answers_max[idx] * weight} мл')
         else:
             st.info(f'{answers_min[idx] * weight} мл')
+
+    st.markdown('### Таблица Денниса')
+    image = Image.open('source/Dennis.png')
+    st.image(image)
