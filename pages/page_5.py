@@ -31,4 +31,7 @@ def visualization():
         idx_2 = selected_age.index(age)
 
         idx = idx_1 + 3 * idx_2
-        st.info(f'{answers_min[idx] * weight} - {answers_max[idx] * weight} мл')
+        if answers_min[idx] != answers_max[idx]:
+            st.info(f'{answers_min[idx] * weight} - {answers_max[idx] * weight} мл')
+        else:
+            st.info(f'{answers_min[idx] * weight} мл')
