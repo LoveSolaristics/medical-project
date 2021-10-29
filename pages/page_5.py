@@ -12,7 +12,7 @@ def visualization():
     selected_age = ['1 месяц - 1 год', '1 - 5 лет', '5 - 10 лет']
     age = st.selectbox('Выберите возраст', selected_age)
 
-    weight = st.number_input('Введите вес', step=1)
+    weight = st.number_input('Введите вес', step=1.)
 
     answers_min = [
         150, 120, 75,
@@ -33,9 +33,9 @@ def visualization():
 
         idx = idx_1 + 3 * idx_2
         if answers_min[idx] != answers_max[idx]:
-            st.info(f'{answers_min[idx] * weight} - {answers_max[idx] * weight} мл')
+            st.info(f'{answers_min[idx] * weight:.2f} - {answers_max[idx] * weight:.2f} мл')
         else:
-            st.info(f'{answers_min[idx] * weight} мл')
+            st.info(f'{answers_min[idx] * weight:.2f} мл')
 
     st.markdown('### Таблица Денниса')
     image = Image.open('source/Dennis.png')

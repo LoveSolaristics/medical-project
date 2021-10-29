@@ -18,7 +18,7 @@ def visualization():
     ]
 
     years = st.selectbox('Выберите возраст', selected)
-    weight = st.number_input('Введите вес (в килограммах)', step=1)
+    weight = st.number_input('Введите вес (в килограммах)', step=1.)
 
     click = st.button('Рассчитать')
 
@@ -55,4 +55,4 @@ def visualization():
 
     if click:
         st.info(f'Суточная потреность в жидкости: '
-                f'{min(min_value * weight, 2400)} - {min(max_value * weight, 2400)} мл/сутки')
+                f'{min(min_value * weight, 2400):.2f} - {min(max_value * weight, 2400):.2f} мл/сутки')
