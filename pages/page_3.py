@@ -16,8 +16,8 @@ def visualization():
 
         click_1 = st.button('Рассчитать')
         if click_1:
-            min_doze = 0.1 * years
-            max_doze = 0.5 * years
+            min_doze = 0.5 * years
+            max_doze = 1 * years
 
             st.info(f'Ввводим десятипроцентный раствор\n\n'
                     f'${min(min_doze, 10):.1f}$ (кальция хлорид) - ${min(max_doze, 10):.1f}$ мл/сут (кальция глюконат)\n\n'
