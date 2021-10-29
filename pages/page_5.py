@@ -32,10 +32,11 @@ def visualization():
         idx_2 = selected_age.index(age)
 
         idx = idx_1 + 3 * idx_2
-        if answers_min[idx] != answers_max[idx]:
-            st.info(f'{answers_min[idx] * weight:.2f} - {answers_max[idx] * weight:.2f} мл')
+
+        if min(answers_min[idx] * weight, 2400) != min(answers_max[idx] * weight, 2400):
+            st.info(f'{min(answers_min[idx] * weight, 2400):.2f} - {min(answers_max[idx] * weight, 2400):.2f} мл')
         else:
-            st.info(f'{answers_min[idx] * weight:.2f} мл')
+            st.info(f'{min(answers_min[idx] * weight, 2400):.2f} мл')
 
     st.markdown('### Таблица Денниса')
     image = Image.open('source/Dennis.png')
